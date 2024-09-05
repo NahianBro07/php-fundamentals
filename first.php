@@ -93,8 +93,7 @@ Switch(true){
     case($r == -1 && $n < 0):
         echo "{$n} is Negative Odd\n";
         break;
-}*/
-
+}
 $string ="10";
 
 switch ($string) {
@@ -111,17 +110,36 @@ switch ($string) {
         echo "Not Found";
 }
 
-//
 
+//Alternate syntex
 
+$n=300;
+if ($n%2==0) {
+    echo "{$n} is Even";
+    echo PHP_EOL;
+} else {
+    echo "{$n} is Odd";
+    echo PHP_EOL;
 
+}
 
+if ($n%2==0):
+    echo "{$n} is Even";
+    echo PHP_EOL;
+else:
+    echo "{$n} is Odd";
+    echo PHP_EOL;
+endif;
 
-
-
-
-
-
-
-
+switch($n%2==0):
+    case true:
+        echo "{$n} is Even";
+        echo PHP_EOL;
+        break;
+    case false:
+        echo "{$n} is Odd";
+        echo PHP_EOL;
+        break;
+endswitch;
+*/
 ?>
