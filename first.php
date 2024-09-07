@@ -122,7 +122,6 @@ if ($n%2==0) {
     echo PHP_EOL;
 
 }
-
 if ($n%2==0):
     echo "{$n} is Even";
     echo PHP_EOL;
@@ -130,7 +129,6 @@ else:
     echo "{$n} is Odd";
     echo PHP_EOL;
 endif;
-
 switch($n%2==0):
     case true:
         echo "{$n} is Even";
@@ -141,5 +139,102 @@ switch($n%2==0):
         echo PHP_EOL;
         break;
 endswitch;
-*/
+
+
+//mathay gobor diye vora
+//brain da chuidda gese
+
+
+//Terniary Operator Sepacial Case
+$n=11;
+echo $n%2==0 ? "{$n} is Even" : (($n%2!=0) ? "{$n} is Odd" : "Not Found");
+
+
+//For loop
+for($i=10, $j=0; $i>=0; $i--, $j++){
+    echo $i.":".$j." ";
+     echo $i.":".(10-$i).PHP_EOL;
+    ;
+}
+echo"\n";
+
+$n=3;
+for($i=$n, $f=1; $i>1; $i--){
+    $f*=$i;
+}
+printf("Factorial of %d is %d \n",$n,$f);
+
+// factorial form 1 to 10
+$n=1;
+$j=1;
+for($i=1; $i<=10; $i++){
+    $n*=$i;
+    $j++;
+    echo "Factorial of {$i} is {$n}\n";
+}
+echo "number of iteration is {$j}\n";
+
+
+//Fibanacci Series
+//0 1 1 2 3 5 8 13 21 34
+$a = 0;
+$b = 1;
+for ($i = 0; $i < 10; $i++) {
+    echo $a . " "; 
+    $c = $a + $b; 
+    $b = $a;  
+    $a = $c;
+}
+$a = 0;//veryold
+$b = 1;//old
+$c = 1;//new
+
+for($i=0; $i<20; $i++){
+    echo $a." ";
+    $a = $b;
+    $b = $c;
+    $c = $a+$b;
+}
+
+// Null Coles Operator
+
+$default_lat = 10.2;
+$default_long = 20.3;
+$user_lat;
+// $lat = isset($user_lat) ? $user_lat : $default_lat;
+$lat = $user_lat ?? $default_lat;##
+echo $lat;
+
+
+// Functions
+
+include_once "function.php";
+$x =13;
+if(isEven($x))//argument
+{
+    echo "{$x} is a Even Number";
+}
+else{
+    echo "{$x} is a Odd Number";
+}
+
+include_once "function.php";
+$fac = 5;
+echo "Factorial of {$fac} is ".factorial($fac); 
+
+include_once "function.php";
+//$item = "Coffee";
+//$numberOfItem = "2 cups";
+//serve($item, $numberOfItem);
+serve();
+
+include_once "function.php";
+echo "Sum of 3 numbers are ".sum(5,6,7);*/
+
+
+
+
+
+
+
 ?>
