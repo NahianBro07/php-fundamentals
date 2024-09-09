@@ -231,10 +231,4 @@ serve();
 include_once "function.php";
 echo "Sum of 3 numbers are ".sum(5,6,7);*/
 
-
-
-
-
-
-
 ?>
